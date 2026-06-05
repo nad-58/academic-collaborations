@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="720" viewBox="0 0 1320 720" role="img" aria-labelledby="title desc">
+  <title id="title">Short-term prosumer electricity-demand forecasting workflow</title>
+  <desc id="desc">Public-safe flowchart showing data integration, cleansing, feature engineering, feature selection, clustering, forecasting, aggregation, and evaluation.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f8fafc}.panel{fill:#ffffff;stroke:#cbd5e1;stroke-width:2;rx:18;ry:18}
+      .blue{fill:#dbeafe;stroke:#1d4ed8;stroke-width:2;rx:14;ry:14}
+      .green{fill:#dcfce7;stroke:#16a34a;stroke-width:2;rx:14;ry:14}
+      .amber{fill:#fef3c7;stroke:#d97706;stroke-width:2;rx:14;ry:14}
+      .violet{fill:#ede9fe;stroke:#7c3aed;stroke-width:2;rx:14;ry:14}
+      .rose{fill:#ffe4e6;stroke:#e11d48;stroke-width:2;rx:14;ry:14}
+      .title{font:700 28px Arial,Helvetica,sans-serif;fill:#0f172a}
+      .h{font:700 18px Arial,Helvetica,sans-serif;fill:#0f172a}
+      .t{font:14px Arial,Helvetica,sans-serif;fill:#334155}
+      .arrow{stroke:#475569;stroke-width:3;fill:none;marker-end:url(#m)}
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#475569"/></marker>
+  </defs>
+  <rect class="bg" width="1320" height="720"/>
+  <text class="title" x="35" y="45">Short-term prosumer demand forecasting for smart-grid flexibility</text>
+  <text class="t" x="35" y="72">An anonymised, public-safe summary of the MSc project workflow.</text>
+
+  <rect class="panel" x="30" y="100" width="1260" height="520"/>
+
+  <rect class="blue" x="55" y="135" width="210" height="110"/>
+  <text class="h" x="75" y="165">1. Public data sources</text>
+  <text class="t" x="75" y="192">Household electricity demand</text>
+  <text class="t" x="75" y="214">Weather and calendar variables</text>
+
+  <rect class="green" x="305" y="135" width="220" height="110"/>
+  <text class="h" x="325" y="165">2. Data cleansing</text>
+  <text class="t" x="325" y="192">Duplicates, gaps, zero values, spikes</text>
+  <text class="t" x="325" y="214">Imputation, 15-min resampling, smoothing</text>
+
+  <rect class="violet" x="565" y="135" width="220" height="110"/>
+  <text class="h" x="585" y="165">3. Feature engineering</text>
+  <text class="t" x="585" y="192">96 daily demand values</text>
+  <text class="t" x="585" y="214">Seven normalised shape factors</text>
+
+  <rect class="amber" x="825" y="135" width="220" height="110"/>
+  <text class="h" x="845" y="165">4. Feature selection</text>
+  <text class="t" x="845" y="192">Correlation, ACF/PACF</text>
+  <text class="t" x="845" y="214">Mutual information and domain review</text>
+
+  <rect class="rose" x="1085" y="135" width="180" height="110"/>
+  <text class="h" x="1105" y="165">5. Target</text>
+  <text class="t" x="1105" y="192">Day-ahead demand</text>
+  <text class="t" x="1105" y="214">at 15-min resolution</text>
+
+  <line class="arrow" x1="265" y1="190" x2="305" y2="190"/>
+  <line class="arrow" x1="525" y1="190" x2="565" y2="190"/>
+  <line class="arrow" x1="785" y1="190" x2="825" y2="190"/>
+  <line class="arrow" x1="1045" y1="190" x2="1085" y2="190"/>
+
+  <rect class="violet" x="120" y="315" width="250" height="120"/>
+  <text class="h" x="140" y="345">6. Behavioural clustering</text>
+  <text class="t" x="140" y="372">K-means on shape factors</text>
+  <text class="t" x="140" y="394">Elbow method; four interpretable groups</text>
+  <text class="t" x="140" y="416">Patterns treated as hypotheses</text>
+
+  <rect class="blue" x="430" y="315" width="270" height="120"/>
+  <text class="h" x="450" y="345">7. Model benchmarking</text>
+  <text class="t" x="450" y="372">Linear regression</text>
+  <text class="t" x="450" y="394">Random-forest regression</text>
+  <text class="t" x="450" y="416">Vanilla LSTM</text>
+
+  <rect class="green" x="760" y="315" width="250" height="120"/>
+  <text class="h" x="780" y="345">8. Dynamic adaptation</text>
+  <text class="t" x="780" y="372">Rolling one-month training window</text>
+  <text class="t" x="780" y="394">Seasonal and behavioural updates</text>
+  <text class="t" x="780" y="416">Controlled re-training</text>
+
+  <rect class="amber" x="1070" y="315" width="180" height="120"/>
+  <text class="h" x="1090" y="345">9. Evaluation</text>
+  <text class="t" x="1090" y="372">MAPE and R²</text>
+  <text class="t" x="1090" y="394">Naïve baseline</text>
+  <text class="t" x="1090" y="416">Error-spike review</text>
+
+  <line class="arrow" x1="370" y1="375" x2="430" y2="375"/>
+  <line class="arrow" x1="700" y1="375" x2="760" y2="375"/>
+  <line class="arrow" x1="1010" y1="375" x2="1070" y2="375"/>
+
+  <rect class="panel" x="120" y="485" width="1130" height="95"/>
+  <text class="h" x="145" y="515">Key findings and evaluation lessons</text>
+  <text class="t" x="145" y="542">Random forest was the strongest tested model, but some individual-household results remained weaker than a naïve baseline.</text>
+  <text class="t" x="145" y="565">Cluster-specific modelling helped in selected cases, while aggregation across prosumers reduced individual variability and improved forecast stability.</text>
+
+  <line class="arrow" x1="1175" y1="245" x2="1175" y2="315"/>
+  <text class="t" x="35" y="665">Public portfolio diagram: no personal names, company identifiers, private household information, or original confidential figures.</text>
+</svg>
