@@ -1,22 +1,30 @@
 # Aston University Collaboration
 
-This section will document postgraduate industrial supervision and collaboration with Aston University.
+This section documents postgraduate industrial supervision and collaboration with Aston University in artificial intelligence, machine learning, data science, computer vision, and engineering applications.
 
 ## Current role
 
-I contribute as a professional supervisor for postgraduate industrial projects in AI, machine learning, data science, computer vision, and related engineering applications.
+I contribute as a professional supervisor for postgraduate industrial projects, supporting research scoping, data preparation, model selection, evaluation methodology, technical interpretation, and research-to-industry translation.
 
-## Planned content
+## Featured project
 
-Future public-safe additions may include:
+### Short-term electricity-demand forecasting for smart-grid flexibility
 
-- supervision themes;
-- selected project summaries;
-- evaluation and methodology guidance;
-- research-to-industry lessons;
-- publications or conference outputs where permission allows;
-- anonymised examples of technical mentoring and project impact.
+This anonymised MSc Data Science case study developed a machine-learning methodology for day-ahead electricity-demand forecasting of residential prosumers. The work combined data cleansing, time-series feature engineering, feature selection, behavioural clustering, model benchmarking, dynamic retraining, and aggregation analysis.
+
+[View the full case study](./projects/prosumer-demand-forecasting/README.md)
+
+## Collaboration themes
+
+- Time-series forecasting
+- Smart grids and local energy communities
+- Data quality and missing-value treatment
+- Feature engineering and feature selection
+- Behavioural clustering using shape factors
+- Regression model benchmarking
+- Dynamic retraining and lifecycle thinking
+- Model limitations and error analysis
 
 ## Public-content boundary
 
-Student names, assessment material, confidential industrial data, unpublished proprietary work, and restricted project details will not be included without explicit permission.
+This repository includes a rewritten and anonymised technical summary only. It excludes names, signatures, contact details, assessment material, and identifying information.
