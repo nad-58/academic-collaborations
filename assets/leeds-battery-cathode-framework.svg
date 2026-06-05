@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="620" viewBox="0 0 1280 620" role="img" aria-labelledby="title desc">
+  <title id="title">Leeds battery cathode computational framework</title>
+  <desc id="desc">Simplified flowchart of the lithium-ion battery cathode porous-media prediction workflow.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f8fafc}.box{fill:#ffffff;stroke:#334155;stroke-width:2;rx:16;ry:16}
+      .blue{fill:#dbeafe;stroke:#1d4ed8}.green{fill:#dcfce7;stroke:#16a34a}.amber{fill:#fef3c7;stroke:#d97706}.violet{fill:#ede9fe;stroke:#7c3aed}
+      .title{font:700 28px Arial,Helvetica,sans-serif;fill:#0f172a}.h{font:700 18px Arial,Helvetica,sans-serif;fill:#0f172a}.t{font:14px Arial,Helvetica,sans-serif;fill:#334155}
+      .arrow{stroke:#475569;stroke-width:3;fill:none;marker-end:url(#m)}
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#475569"/></marker>
+  </defs>
+  <rect class="bg" width="1280" height="620"/>
+  <text class="title" x="35" y="45">Computational framework for predicting porous media properties of lithium-ion battery cathode</text>
+  <text class="t" x="35" y="72">Public-safe summary based on the University of Leeds collaboration poster.</text>
+  <rect class="box blue" x="35" y="105" width="220" height="120"/><text class="h" x="55" y="135">1. Manufacturing context</text><text class="t" x="55" y="162">Formulation &amp; coating → drying →</text><text class="t" x="55" y="184">calendering → slitting → cell /</text><text class="t" x="55" y="206">module / pack assembly</text>
+  <rect class="box blue" x="285" y="105" width="220" height="120"/><text class="h" x="305" y="135">2. Coating &amp; calendering</text><text class="t" x="305" y="162">Validated CFD for wet coating</text><text class="t" x="305" y="184">Shear-thinning non-Newtonian fluid</text><text class="t" x="305" y="206">243 DoE cases; 60% thickness reduction</text>
+  <rect class="box green" x="535" y="105" width="220" height="120"/><text class="h" x="555" y="135">3. Porous-media generation</text><text class="t" x="555" y="162">MATLAB particle packing</text><text class="t" x="555" y="184">Gamma and Weibull radius</text><text class="t" x="555" y="206">distributions</text>
+  <rect class="box violet" x="785" y="105" width="220" height="120"/><text class="h" x="805" y="135">4. Image processing</text><text class="t" x="805" y="162">Dataset from MATLAB</text><text class="t" x="805" y="184">Porosity values computed in Python</text><text class="t" x="805" y="206">Structured learning data</text>
+  <rect class="box amber" x="1035" y="105" width="210" height="120"/><text class="h" x="1055" y="135">5. Physics-based reference</text><text class="t" x="1055" y="162">LBM for permeability</text><text class="t" x="1055" y="184">and tortuosity</text>
+  <line class="arrow" x1="255" y1="165" x2="285" y2="165"/><line class="arrow" x1="505" y1="165" x2="535" y2="165"/><line class="arrow" x1="755" y1="165" x2="785" y2="165"/><line class="arrow" x1="1005" y1="165" x2="1035" y2="165"/>
+  <rect class="box blue" x="430" y="285" width="420" height="110"/><text class="h" x="450" y="315">6. Machine learning stage</text><text class="t" x="450" y="342">CNN trained on labelled upstream dataset</text><text class="t" x="450" y="364">Fast prediction of porous-media properties</text>
+  <line class="arrow" x1="1140" y1="225" x2="1140" y2="250"/><line class="arrow" x1="1140" y1="250" x2="850" y2="250"/><line class="arrow" x1="850" y1="250" x2="850" y2="285"/>
+  <rect class="box green" x="35" y="445" width="590" height="130"/><text class="h" x="55" y="475">Results snapshot</text><text class="t" x="55" y="503">Gamma: Porosity 0.51 / 0.52, Permeability 1.36 / 1.18, Tortuosity 2.08 / 2.43</text><text class="t" x="55" y="531">Weibull: Porosity 0.47 / 0.48, Permeability 1.62 / 1.51, Tortuosity 1.77 / 1.94</text><text class="t" x="55" y="559">Values compare computational references with CNN predictions.</text>
+  <rect class="box amber" x="655" y="445" width="590" height="130"/><text class="h" x="675" y="475">Next steps</text><text class="t" x="675" y="503">Add more physics-driven models for drying and calendering.</text><text class="t" x="675" y="531">Couple with electrochemical-thermal battery-performance analysis.</text><text class="t" x="675" y="559">Continue research-to-industry translation.</text>
+</svg>
