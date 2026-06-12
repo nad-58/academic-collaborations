@@ -10,9 +10,12 @@ I contribute as a professional supervisor for postgraduate industrial projects, 
 
 ### Short-term electricity-demand forecasting for smart-grid flexibility
 
-This anonymised MSc Data Science case study developed a machine-learning methodology for day-ahead electricity-demand forecasting of residential prosumers. The work combined data cleansing, time-series feature engineering, feature selection, behavioural clustering, model benchmarking, dynamic retraining, and aggregation analysis.
+This anonymised MSc Data Science case study developed a machine-learning methodology for day-ahead electricity-demand forecasting of residential prosumers. The work combines data cleansing, time-series feature engineering, behavioural clustering, model benchmarking, and aggregation analysis.
 
-[View the full case study](./projects/prosumer-demand-forecasting/README.md)
+- [Technical case study](./projects/prosumer-demand-forecasting/README.md)
+- [Runnable Python implementation](./projects/prosumer-demand-forecasting/RUNNABLE-IMPLEMENTATION.md)
+
+The project includes synthetic data generation, reusable Python modules, automated tests, an end-to-end example, package metadata, and GitHub Actions validation.
 
 ## Collaboration themes
 
@@ -24,7 +27,3 @@ This anonymised MSc Data Science case study developed a machine-learning methodo
 - Regression model benchmarking
 - Dynamic retraining and lifecycle thinking
 - Model limitations and error analysis
-
-## Public-content boundary
-
-This repository includes a rewritten and anonymised technical summary only. It excludes names, signatures, contact details, assessment material, and identifying information.
