@@ -6,11 +6,14 @@ This project contains a synthetic-data example of short-term electricity demand 
 
 - synthetic data generation
 - cleaning and 15-minute resampling
-- daily shape-factor features
+- seven daily shape factors
 - lagged day-ahead features
 - k-means clustering
+- profile aggregation
 - linear regression and random forest benchmarks
 - optional LSTM architecture
+
+See [Architecture and Technical Insights](ARCHITECTURE-AND-INSIGHTS.md) for the smart-grid model triad, five-stage pipeline, cluster-routing design, and aggregation effect.
 
 ## Install and run
 
