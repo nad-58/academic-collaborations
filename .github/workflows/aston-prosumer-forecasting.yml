@@ -1,0 +1,33 @@
+name: Aston prosumer forecasting
+
+on:
+  push:
+    paths:
+      - 'collaborations/aston-university/projects/prosumer-demand-forecasting/**'
+      - '.github/workflows/aston-prosumer-forecasting.yml'
+  pull_request:
+    paths:
+      - 'collaborations/aston-university/projects/prosumer-demand-forecasting/**'
+      - '.github/workflows/aston-prosumer-forecasting.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: collaborations/aston-university/projects/prosumer-demand-forecasting
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install package
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .[dev]
+      - name: Compile
+        run: python -m compileall -q src examples tests
+      - name: Test
+        run: python -m pytest -q
+      - name: Run example
+        run: python examples/run_pipeline.py
