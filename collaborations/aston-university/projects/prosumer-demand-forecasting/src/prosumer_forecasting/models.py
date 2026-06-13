@@ -3,6 +3,8 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, r2_score
 
+from prosumer_forecasting.baselines import benchmark_baselines
+
 
 def safe_mape(y_true, y_pred):
     actual = np.asarray(y_true, dtype=float)
@@ -17,7 +19,9 @@ def evaluate(model, x_train, y_train, x_test, y_test):
 
 
 def benchmark_models(x_train, y_train, x_test, y_test):
-    return {
+    results = benchmark_baselines(x_test, y_test)
+    results.update({
         "linear_regression": evaluate(LinearRegression(), x_train, y_train, x_test, y_test),
         "random_forest": evaluate(RandomForestRegressor(n_estimators=80, random_state=42, n_jobs=-1), x_train, y_train, x_test, y_test),
-    }
+    })
+    return results
