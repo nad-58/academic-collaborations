@@ -1,7 +1,11 @@
 import numpy as np
 from sklearn.metrics import mean_absolute_error, r2_score
 
-from prosumer_forecasting.models import safe_mape
+
+def safe_mape(y_true, y_pred):
+    actual = np.asarray(y_true, dtype=float)
+    pred = np.asarray(y_pred, dtype=float)
+    return float(np.mean(np.abs(actual - pred) / np.maximum(np.abs(actual), 1e-6)) * 100)
 
 
 def _metric_dict(y_true, y_pred):
