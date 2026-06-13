@@ -11,6 +11,8 @@ The public implementation has been checked end to end with the synthetic 60-day 
 | Seven daily shape factors | Verified |
 | K-means clustering | Verified |
 | 96-lag day-ahead feature matrix | Verified |
+| Persistence baseline | Added and tested |
+| Seasonal-naive baseline | Added and tested |
 | Linear regression benchmark | Verified |
 | Random forest benchmark | Verified |
 | Protected MAPE | Verified |
@@ -31,7 +33,7 @@ Forecast features: 97
 Clusters: 4
 ```
 
-In the reproducible synthetic example, both baseline models produced finite predictions and strong positive R² values. Random forest slightly outperformed linear regression. These values demonstrate that the code executes correctly; they are not claims about real-world forecasting performance.
+The benchmark now reports simple baseline methods before the machine-learning models. These values demonstrate that the code executes correctly; they are not claims about real-world forecasting performance.
 
 ## Validation commands
 
@@ -44,7 +46,6 @@ python examples/run_pipeline.py
 ## Remaining validation work
 
 - Confirm the latest GitHub Actions run is green in the Actions tab.
-- Add persistence and seasonal-naïve baselines.
 - Add rolling-window retraining tests.
 - Add real public-dataset loader documentation.
 - Add prediction intervals and drift monitoring.
